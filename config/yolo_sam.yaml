@@ -6,7 +6,7 @@ yolo_sam_node:
 
     max_pending_frames: 5
     frame_process_period_sec: 0.001
-    enable_visualization: false
+    enable_visualization: true
 
     # YOLO
     onnx_yolo_model_path: "/URobotics_ws/weights/yolo/namsan/yolo-world_l.onnx"
