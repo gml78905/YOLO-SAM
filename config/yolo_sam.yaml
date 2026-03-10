@@ -1,0 +1,16 @@
+yolo_sam_node:
+  ros__parameters:
+    image_topic: "/go1_d435/color/image_raw" ##/go1_d435/color/image_raw
+    visualization_topic: "/visualization/test"
+    detections_topic: "/yolo_sam/detections"
+
+    # Paths
+    onnx_model_path: "/URobotics_ws/weights/namsan/yolo-world_l.onnx"
+    onnx_object_list_path: "/URobotics_ws/weights/namsan/namsan.json"
+
+    sam_weights: "/URobotics_ws/weights/mobile_sam.pt"
+    yolo_conf: 0.20
+    sam_conf: 0.30
+
+    # Comma-separated classes or a .txt file path.
+    object_list: "bench,car,building,tower"
