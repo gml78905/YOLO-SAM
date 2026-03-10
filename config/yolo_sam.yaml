@@ -4,13 +4,22 @@ yolo_sam_node:
     visualization_topic: "/visualization/test"
     detections_topic: "/yolo_sam/detections"
 
-    # Paths
-    onnx_model_path: "/URobotics_ws/weights/namsan/yolo-world_l.onnx"
-    onnx_object_list_path: "/URobotics_ws/weights/namsan/namsan.json"
+    max_pending_frames: 5
+    frame_process_period_sec: 0.001
+    enable_visualization: false
 
-    sam_weights: "/URobotics_ws/weights/mobile_sam.pt"
-    yolo_conf: 0.30
-    sam_conf: 0.30
+    # YOLO
+    onnx_yolo_model_path: "/URobotics_ws/weights/yolo/namsan/yolo-world_l.onnx"
+    onnx_object_list_path: "/URobotics_ws/weights/yolo/namsan/namsan.json"
+
+    yolo_conf: 0.20
+    nms_iou_threshold: 0.30
+
+    # SAM
+    onnx_sam_encoder_model_path: "/URobotics_ws/weights/mobile_sam2/mobile_sam_encoder.onnx"
+    onnx_sam_decoder_model_path: "/URobotics_ws/weights/mobile_sam2/mobile_sam_decoder.onnx"
+
+    sam_mask_threshold: 0.0
 
     # Comma-separated classes or a .txt file path.
-    object_list: "bench,car,building,tower"
+    object_list: "sign,bench,gazebo,car,building,tower"
