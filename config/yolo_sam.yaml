@@ -9,7 +9,7 @@ yolo_sam_node:
     onnx_object_list_path: "/URobotics_ws/weights/namsan/namsan.json"
 
     sam_weights: "/URobotics_ws/weights/mobile_sam.pt"
-    yolo_conf: 0.20
+    yolo_conf: 0.30
     sam_conf: 0.30
 
     # Comma-separated classes or a .txt file path.
